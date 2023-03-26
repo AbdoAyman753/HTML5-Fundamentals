@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Sliders</title>
+</head>
+<body>
+    Red <input type="range"  value="0" min="0" max="255" step="1" oninput="changeColor()"> 
+    Green <input type="range" value="0" min="0" max="255" step="1" oninput="changeColor()"> 
+    Blue <input type="range" value="0" min="0" max="255" step="1" oninput="changeColor()"> 
+
+    <div>      <h1 id="text">The Color of This Text Can be Changed by the Sliders above.</h1> 
+    </div>
+    <script src="slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="modernizr-custom (7).js"></script>
+</head>
+<body>
+    <h2>new form inputs</h2>
+    <form>
+        age:<input type="number" max="50" min="10" step="2" required autofocus  > 
+        <input type="range" max="50" min="10" value="10" step="2" oninput="showValue(this)">
+        <span></span>
+       email: <input type="email" autocomplete="on" placeholder="example@example.com">
+       color: <input type="color" onchange="changeColor()">
+       tel :<input type="tel">
+       search <input type="search">
+       url <input type="url">
+        <input type="submit">
+
+    </form>
+    <button onclick="test()">click</button>
+    <button onclick="increase()">+</button>   
+     <button onclick="decrease()">-</button>
+
+    <script>
+        var inp = document.getElementsByTagName("input")[1];
+function showValue(r){
+    var span = document.getElementsByTagName("span")[0];
+    span.innerText = r.value;
+
+}
+function test(){
+    console.log(color.value);
+    //console.log(inp.valueAsNumber);//number
+}
+function increase(){
+    inp.stepUp(2);
+}
+function decrease(){
+    inp.stepDown(2);
+}
+function changeColor(){
+
+    var color = document.querySelector("input[type='color']");
+    var body  = document.body;
+    body.style.backgroundColor = color.value;
+}
+    </script>
+    <!-- <h2>old form inputs</h2>
+    <input type="text">
+    <input type="password">
+    <input type="checkbox">
+    <input type="radio">
+    <input type="file">
+    <input type="submit">
+    <input type="reset">
+    <input type="image">
+    <input type="hidden">
+    <input type="button">
+    <textarea>
+    </textarea>
+    <select>
+        <option></option>
+    </select> -->
+
+    <!-- <input type="date"> -->
+    <!-- <header style="background-color: green;">
+        hello
+    </header> -->
+
+    <script>
+        // if(!Modernizr.inputtypes.date){
+        //     alert("supported");
+        // }
+        // // else{
+        // //     alert("un supported");
+        // // }
+    </script>
+</body>
+</html>

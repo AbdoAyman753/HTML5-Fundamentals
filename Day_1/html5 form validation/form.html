@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML:5 Form</title>
+    <style>
+        .Input{
+            width: 200px;
+            height: 25px;
+        }
+        span{
+            color: gray;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Change Email Address</h2>
+    <div style="display: flex;">
+        <form>
+        
+            <input type="text" class="Input" autocomplete="on" 
+                placeholder="Username" pattern="[a-zA-Z]{5,}[0-9]*"></br>
+            
+            <span>
+                The required user name must starts with 
+                alphabetical characters and be at least 5 characters </span></br>
+
+            <input type="email" class="Input" autocomplete="on" 
+                placeholder="Email" pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"></br>
+            
+            <span>
+                The required email must be like example@site.com </span></br>
+
+            <input type="submit" value="Change">
+           
+            
+        </form>
+    </div>
+    
+</body>
+</html>

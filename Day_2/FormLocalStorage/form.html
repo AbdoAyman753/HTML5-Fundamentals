@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML:5 Form</title>
+    <style>
+        .Input{
+            width: 200px;
+            height: 25px;
+        }
+        span{
+            color: gray;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Change Email Address</h2>
+    <div style="display: flex;">
+        <form method="post">
+        
+            <input type="text" id="userName" class="Input" autocomplete="on" 
+                placeholder="Username" pattern="[a-zA-Z]{5,}[0-9]*"></br>
+            
+            <span>
+                The required user name must starts with 
+                alphabetical characters and be at least 5 characters </span></br>
+
+            <input type="email" id="email" class="Input" autocomplete="on" 
+                placeholder="Email" pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"></br>
+            
+            <span>
+                The required email must be like example@site.com </span></br>
+
+            <input type="checkbox" id="remember" name="remember" value="1">
+            <label for="remember"> Remember Me</label></br>
+            <input type="button" value="Change" onclick="EnterData()">
+            <input type="button" value="Clear" onclick="clearItems()">
+           
+            <script>
+                window.addEventListener("load",function(){
+                    console.log("Listner, Storage = "+localStorage.length);
+                    if(localStorage.length > 0){
+                        
+                        //call load
+                        document.getElementById("userName").value = getData("userName");
+                        document.getElementById("email").value = getData("email");
+                        document.getElementById("remember").checked = true;
+                    }
+                });
+
+                function EnterData(){
+                    var checkBox = document.getElementById("remember");
+                    if(checkBox.checked){
+                        console.log("Save Data");
+                        saveData("userName",
+                            document.getElementById("userName").value);
+                        saveData("email",
+                            document.getElementById("email").value);
+                    }else{
+                        clearItems();
+                    }
+                }
+                function saveData(item,value){
+                    console.log(item+" = "+value);
+                    localStorage.setItem(item,value);
+                }
+                function getData(item){
+                    return localStorage.getItem(item);
+                }
+                function clearItem(item){
+                    localStorage.removeItem(item);
+                }
+                function clearItems(){
+                    localStorage.clear();
+                    console.log("storage size = "+localStorage.length);
+                }
+
+            </script>
+            
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        html,body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            }
+    </style>
+</head>
+<body>
+    <div style="z-index: 2;">
+        <input type="color" id="favcolor" name="favcolor" value="#000000">
+        <input type="button" value="Draw" onclick="draw()">
+    </div>
+    
+    <canvas height="100%" width="100%" style="fill:#00ff00"></canvas>
+    
+    <script>
+        var canvas = document.getElementsByTagName("canvas")[0];
+
+        canvas.width = window.screen.width;
+        canvas.setAttribute("height",window.screen.height);
+
+        var cntxt = canvas.getContext("2d");
+        function draw(){
+            cntxt.strokeStyle = document.getElementById("favcolor").value;
+            cntxt.clearRect(0,0,canvas.width,canvas.height);
+            for(var i = 0;i<200;i++){
+                cntxt.beginPath();
+                var x=Math.random() * window.screen.width;
+                var y=Math.random() * window.screen.height;
+                cntxt.arc(x,y,30,0,Math.PI*2,true);
+                cntxt.stroke();
+            }
+        }
+    </script>
+</body>
+</html>

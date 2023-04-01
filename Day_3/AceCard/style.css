@@ -1,0 +1,54 @@
+#border{
+    background-color: rgb(225, 225, 225);
+    width: 200px;
+    height: 300px;
+    border:2px solid black;
+    border-radius: 25px;
+}
+#topA{
+    margin-left: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+#midFig{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+
+}#bottomA{
+    margin-left: 170px;
+    margin-top: 60px;
+}
+#trapezoid {
+    border-bottom: 25px solid black;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    height: 0;
+    width: 10px;
+    padding-bottom: 61px;
+}
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+  }
+  #heart:before,
+  #heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: black;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(135deg);
+    transform-origin: 0 100%;
+  }
+  #heart:after {
+    left: 0;
+    transform: rotate(225deg);
+    transform-origin: 100% 100%;
+  }

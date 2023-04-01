@@ -1,0 +1,76 @@
+#trafficLight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#trafficLightBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    height: 300px;
+    background-color: black;
+}
+
+#greenLight{
+    position: relative;
+    /* top:30px; */
+    width:60px;
+    max-height: 60px;
+    background-color: green;
+    /* box-sizing: border-box; */
+    margin: 5px;
+    border-radius: 50%;
+    transition: all 1s;
+    flex:1 1 0;
+}
+#greenLight:hover{
+    width:80px;
+    max-height: 80px;
+    box-shadow: 0px 0px 50px rgb(0, 255, 0);
+}
+
+#yellowLight{
+    position: relative;
+    width:60px;
+    max-height: 60px;
+    background-color: rgb(255, 255, 0);
+    /* box-sizing: border-box; */
+    margin: 5px;
+    border-radius: 50%;
+    transition: all 1s;
+    flex:1 1 0;
+}
+#yellowLight:hover{
+    width:80px;
+    max-height: 80px;
+    box-shadow: 0px 0px 50px yellow;
+}
+
+#redLight{
+    position: relative;
+    /* top: 210px; */
+    width:60px;
+    max-height: 60px;
+    background-color: red;
+    /* box-sizing: border-box; */
+    margin: 5px;
+    border-radius: 50%;
+    transition: all 1s;
+    flex:1 1;
+}
+#redLight:hover{
+    width:80px;
+    max-height: 80px;
+    box-shadow: 0px 0px 50px red;
+}
+
+#piller{
+    width:15px;
+    height: 150px;
+    background-color: black;
+}

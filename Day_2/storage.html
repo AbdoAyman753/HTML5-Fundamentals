@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="saveData()">save</button>
+    <button onclick="getData()">get data</button>
+    <button onclick="clearItem()">clear item</button>
+    <button onclick="clearItems()">clear all</button>
+
+
+    <script>
+        //local storage
+        // function saveData(){
+        //     localStorage.setItem("score",100);
+        //     localStorage.userName = "menna";
+
+            
+
+        // }
+        // function getData(){
+        //     alert(localStorage.getItem("score"));
+        //     alert(localStorage.userName);
+        // }
+        // function clearItem(){
+        //     localStorage.removeItem("score");
+        // }
+        // function clearItems(){
+        //     localStorage.clear();
+        // }
+
+        //session storage
+        function saveData(){
+            sessionStorage.setItem("score",100);
+            sessionStorage.userName = "menna";
+
+            
+
+        }
+        function getData(){
+            alert(sessionStorage.getItem("score"));
+            alert(sessionStorage.userName);
+        }
+        function clearItem(){
+            sessionStorage.removeItem("score");
+        }
+        function clearItems(){
+            sessionStorage.clear();
+        }
+    </script>
+    
+</body>
+</html>
